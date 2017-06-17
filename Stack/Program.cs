@@ -25,7 +25,7 @@ namespace Stack
             }
 
         }
-        public char pop(char element)
+        public char pop()
         {
 
             if (tos >= 0)
@@ -72,6 +72,20 @@ namespace Stack
         static void Main(string[] args)
         {
 
+            int sizeofStack;
+            Console.Write("Enter the size of Stack: ");
+            sizeofStack = int.Parse(Console.ReadLine());
+            StackClass Stack = new StackClass(sizeofStack);
+            if (!Stack.ISFull())
+            {
+                Stack.push('A');
+            }
+            if (!Stack.ISEmpty())
+            {
+              Char element =   Stack.pop();
+              Console.WriteLine(element);
+                Console.Read();
+            }
         }
 
 
