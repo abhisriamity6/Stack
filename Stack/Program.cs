@@ -48,7 +48,6 @@ namespace Stack
 
                 return false;
             }
-
         }
         public bool ISEmpty()
         {
@@ -62,7 +61,6 @@ namespace Stack
 
                 return false;
             }
-
         }
     }
 
@@ -109,16 +107,8 @@ namespace Stack
                     Console.Read();
                     break;
                 }
-
             }
-
-
-
-
         }
-
-
-
     }
 }
 
