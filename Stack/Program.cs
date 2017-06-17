@@ -63,8 +63,7 @@ namespace Stack
             }
         }
     }
-
-    class CallStack
+   class CallStack
     {
 
         static void Main(string[] args)
