@@ -76,16 +76,45 @@ namespace Stack
             Console.Write("Enter the size of Stack: ");
             sizeofStack = int.Parse(Console.ReadLine());
             StackClass Stack = new StackClass(sizeofStack);
-            if (!Stack.ISFull())
+          
+
+            // For Push
+            for (;;)
             {
-                Stack.push('A');
+               if(!Stack.ISFull())
+                {
+                    Console.Write("Enter A Value For Stack : ");
+                    char Chartoenter = Convert.ToChar( Console.ReadLine());
+                    Stack.push(Chartoenter);
+
+                }
+               else
+                {
+                    Console.WriteLine("Stack is Full. Now Fetching Value to empty the Stack ");
+
+                    for (;;)
+                    {
+                        if (!Stack.ISEmpty())
+                        {
+                            char value = Stack.pop();
+                            Console.WriteLine("Value For Stack :{0}   ", value);
+
+
+                        }
+                        else
+                        {
+                            break;
+                        }
+                    }
+                    Console.Read();
+                    break;
+                }
+
             }
-            if (!Stack.ISEmpty())
-            {
-              Char element =   Stack.pop();
-              Console.WriteLine(element);
-                Console.Read();
-            }
+
+
+
+
         }
 
 
