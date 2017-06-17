@@ -19,21 +19,64 @@ namespace Stack
         public void push(char element)
         {
 
-            StackArray[tos++] = element;
-
+            if (tos < sizeofStack)
+            {
+                StackArray[tos++] = element;
+            }
 
         }
         public char pop(char element)
         {
 
-           return StackArray[tos--];
-
-
+            if (tos >= 0)
+            {
+                return StackArray[--tos];
+            }
+            else
+                return '@' ;
         }
 
+        public bool ISFull()
+        {
+            if(tos == sizeofStack)
+            {
+                return true;
+
+            }
+            else
+            {
+
+                return false;
+            }
+
+        }
+        public bool ISEmpty()
+        {
+            if (tos == 0)
+            {
+                return true;
+
+            }
+            else
+            {
+
+                return false;
+            }
+
+        }
+    }
+
+    class CallStack
+    {
 
         static void Main(string[] args)
         {
+
         }
+
+
+
     }
 }
+
+
